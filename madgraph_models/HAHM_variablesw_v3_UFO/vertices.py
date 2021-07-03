@@ -711,3 +711,9 @@ V_117 = Vertex(name = 'V_117',
                lorentz = [ L.FFV2 ],
                couplings = {(0,0):C.GC_29})
 
+V_118 = Vertex(name = 'V_118',
+              particles = [ P.dm2, P.dm1, P.Zp ],
+              color = [ '1' ],
+              lorentz = [ L.FFV1 ],
+              couplings = {(0,0):C.GC_85})
+

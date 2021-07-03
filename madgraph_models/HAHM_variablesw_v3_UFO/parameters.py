@@ -81,6 +81,22 @@ aXM1 = Parameter(name = 'aXM1',
                  lhablock = 'HIDDEN',
                  lhacode = [ 5 ])
 
+mdm1 = Parameter(name = 'mDM1',
+                nature = 'external',
+                type = 'real',
+                value = 300,
+                texname = '\\text{mDM1}',
+                lhablock = 'HIDDEN',
+                lhacode = [ 6 ])
+
+mdm2 = Parameter(name = 'mDM2',
+                nature = 'external',
+                type = 'real',
+                value = 300,
+                texname = '\\text{mDM2}',
+                lhablock = 'HIDDEN',
+                lhacode = [ 7 ])
+
 MHinput = Parameter(name = 'MHinput',
                     nature = 'external',
                     type = 'real',
@@ -234,9 +250,9 @@ WZ = Parameter(name = 'WZ',
                lhacode = [ 23 ])
 
 WZp = Parameter(name = 'WZp',
-                nature = 'external',
+                nature = 'internal',
                 type = 'real',
-                value = 0.0008252,
+                value = 'mZDinput/aXM1/3.',
                 texname = '\\text{WZp}',
                 lhablock = 'DECAY',
                 lhacode = [ 1023 ])
@@ -528,4 +544,12 @@ sh = Parameter(name = 'sh',
                type = 'real',
                value = 'th/cmath.sqrt(1 + th**2)',
                texname = 's_h')
+
+wdm2 = Parameter(name = 'wdm2',
+                 nature = 'external',
+                 type = 'real',
+                 value = 7.333131475392829e-7,
+                 texname = '\\text{wdm2}',
+                 lhablock = 'DECAY',
+                 lhacode = [ 9000005 ])
 

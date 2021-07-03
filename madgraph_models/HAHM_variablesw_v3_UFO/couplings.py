@@ -345,3 +345,7 @@ GC_84 = Coupling(name = 'GC_84',
                  value = '(ee*complex(0,1)*complexconjugate(CKM2x2))/(sw*cmath.sqrt(2))',
                  order = {'QED':1})
 
+GC_85 = Coupling(name = 'GC_85',
+                 value = 'complex(0,1)*gX',
+                 order = {'QED':1})
+

@@ -297,3 +297,30 @@ hs = Particle(pdg_code = 35,
               GhostNumber = 0,
               LeptonNumber = 0)
 
+dm1 = Particle(pdg_code = 9000001,
+               name = 'dm1',
+               antiname = 'dm1',
+               spin = 2,
+               color = 1,
+               mass = Param.mdm1,
+               width = Param.ZERO,
+               texname = 'dm1',
+               antitexname = 'dm1',
+               charge = 0,
+               GhostNumber = 0,
+               LeptonNumber = 0)
+
+dm2 = Particle(pdg_code = 9000005,
+               name = 'dm2',
+               antiname = 'dm2',
+               spin = 2,
+               color = 1,
+               mass = Param.mdm2,
+               width = Param.wdm2,
+               texname = 'dm2',
+               antitexname = 'dm2',
+               charge = 0,
+               GhostNumber = 0,
+               LeptonNumber = 0)
+
+
