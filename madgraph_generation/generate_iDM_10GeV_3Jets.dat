@@ -31,7 +31,7 @@ define vl~ = ve~ vm~ vt~
 
 generate p p > Zp j, Zp > dm1 dm2
 add process p p > Zp j j, Zp > dm1 dm2
-add process p p > Zp j j j, Zp > dm1 dm2
+#add process p p > Zp j j j, Zp > dm1 dm2
 
 # The beyond Standard Model physics process is gluon fusion production of SM Higgs, with subsequent decay h > X X. X is new physics particle and taken to be real scalar here. One of X decays to a pair of bottom quark, and the other X flies out of detector and behaves as missing energy.
 
@@ -60,9 +60,8 @@ set HIDDEN 6 10.
 set HIDDEN 7 10.5
 set run_card xqcut = 25.
 set run_card pt_min_pdg = {1023: 100.}
-
-set pythia8_card 9000001:mayDecay = off
-set pythia8_card 9000005:mayDecay = off
+#set pythia8_card 9000001:mayDecay = off
+#set pythia8_card 9000005:mayDecay = off
 
 #launch
 #shower=Pythia8
