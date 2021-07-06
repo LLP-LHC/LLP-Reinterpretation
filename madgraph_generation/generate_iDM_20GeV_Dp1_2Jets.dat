@@ -1,0 +1,77 @@
+#************************************************************
+#*                        MadGraph 5                        *
+#*                                                          *
+#*                *                       *                 *
+#*                  *        * *        *                   *
+#*                    * * * * 5 * * * *                     *
+#*                  *        * *        *                   *
+#*                *                       *                 *
+#*                                                          *
+#*                                                          *
+#*    The MadGraph Development Team - Please visit us at    *
+#*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+#*                                                          *
+#************************************************************
+#*                                                          *
+#*               Command File for MadGraph 5                *
+#*                                                          *
+#*     run as ./bin/mg5  filename                           *
+#*                                                          *
+#************************************************************
+import model HAHM_variablesw_v3_UFO
+# Define multiparticle labels
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+# Specify process(es) to run
+#generate p p > h > SS1 SS2, SS1 > b b~, SS2 > ve ve~ @1
+
+generate p p > Zp j, Zp > dm1 dm2
+add process p p > Zp j j, Zp > dm1 dm2
+#add process p p > Zp j j j, Zp > dm1 dm2
+
+# The beyond Standard Model physics process is gluon fusion production of SM Higgs, with subsequent decay h > X X. X is new physics particle and taken to be real scalar here. One of X decays to a pair of bottom quark, and the other X flies out of detector and behaves as missing energy.
+
+# To realize the above process in Madgraph,
+#we force h decay to two different real scalar SS1 and SS2.
+#SS1 decay to a pair of bottom quark, while SS2 is forced to decay to neutrino pair and recognized as missing energy by Pythia. When using the model, be sure to set SS1 and SS2 mass equal in the parameter card "param_card.dat". SS1 can also decay to other light flavor quarks, if want to. Here we focus on SS1 decay to bottom quark according to the typical Yukawa coupling.
+# Output processes to MadEvent directory
+output llp_gen/madgraph_pythia
+
+# This will create a directory PROC_$MODELNAME_$X
+# If you want to specify the path/name of the directory use
+# output PATH
+
+# To generate events, you can go to the created directory and
+
+# run ./bin/generate_events
+
+launch
+shower=Pythia8
+set nevents 80000
+set use_syst False
+set HIDDEN 1 60.
+set HIDDEN 3 0.01
+set HIDDEN 5 10.
+set HIDDEN 6 20.
+set HIDDEN 7 22.
+set run_card xqcut = 25.
+set run_card pt_min_pdg = {1023: 100.}
+#set pythia8_card 9000001:mayDecay = off
+#set pythia8_card 9000005:mayDecay = off
+
+#launch
+#shower=Pythia8
+#set MSS1 40
+#set MSS2 40
+#launch
+#shower=Pythia8
+#set MSS1 15
+#set MSS2 15
+#launch
+#shower=Pythia8
+#set MSS1 7
+#set MSS2 7
