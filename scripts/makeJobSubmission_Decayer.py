@@ -16,6 +16,7 @@ tarballfile = "/storage/af/user/sixie/LLP-Reinterpretation/tarball/Decayer_Delph
 #DELPHESCARD_HIGGS = "delphes_card_CMS_CSCCluster_higgs_PileUp.tcl"
 DELPHESCARD_HIGGS = "delphes_card_CMS_CSCCluster_higgs_PileUp_keepGenParticles.tcl"
 DELPHESCARD_ALP = "delphes_card_CMS_CSCCluster_alp_PileUp.tcl"
+DELPHESCARD_ALP = "delphes_card_CMS_CSCCluster_alp_PileUp.tcl"
 
 
 datasetList = OrderedDict()
@@ -103,6 +104,28 @@ datasetList['gammaalp_1Wm1B_1GeV_2Jets'] = [["/storage/af/user/sixie/LLP-Reinter
 datasetList['gammaalp_1Wtm2B_1GeV_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/ALPs/ALPGG_0dot07.txt",41, DELPHESCARD_ALP]]
 datasetList['zalp_1Wtm2B_1GeV_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/ALPs/ALPGG_0dot07.txt",42, DELPHESCARD_ALP]]
 
+datasetList['iDM_1GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_1mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_3GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_3mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_6GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_6mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_10GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_10mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_20GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_20mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_23GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_23mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_30GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_30mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_33GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_33mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_40GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_40mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_60GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_60mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_100GeV_Dp1_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot1_100mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_1GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_1mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_3GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_3mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_6GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_6mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_10GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_10mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_20GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_20mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_23GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_23mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_30GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_30mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_33GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_33mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_40GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_40mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_60GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_60mass.txt",42, DELPHESCARD_ALP]]
+datasetList['iDM_100GeV_Dp05_2Jets'] = [["/storage/af/user/sixie/LLP-Reinterpretation/branchingRatios/inel/inel_0dot05_100mass.txt",42, DELPHESCARD_ALP]]
 
 
 
