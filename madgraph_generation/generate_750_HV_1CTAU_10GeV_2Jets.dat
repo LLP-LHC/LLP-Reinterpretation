@@ -54,10 +54,10 @@ shower=Pythia8
 set nevents 20000
 set use_syst False
 set MS0 10000.
-set DECAY 9000011 0.75
 set MA0 750.
-set HVINPUTS 2 0.
-set HVINPUTS 5 0.
+set DECAY 9000011 0.75
+set HVINPUTS 2 1.
+set HVINPUTS 4 0.
 set pythia8_card HiddenValley:Ngauge = 3
 set pythia8_card HiddenValley:nFlav = 1
 set pythia8_card HiddenValley:fragment = on
