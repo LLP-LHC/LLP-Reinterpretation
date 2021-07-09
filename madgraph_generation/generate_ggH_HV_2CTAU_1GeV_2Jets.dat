@@ -63,7 +63,7 @@ set pythia8_card HiddenValley:nFlav = 1
 set pythia8_card HiddenValley:fragment = on
 set pythia8_card HiddenValley:FSR = on
 set pythia8_card HiddenValley:alphaOrder = 1
-set pythia8_card HiddenValley:spinFv=0
+set pythia8_card HiddenValley:spinFV = 0
 set pythia8_card 4900111:mayDecay = off
 set pythia8_card 4900113:mayDecay = off
 set MVq 0.1

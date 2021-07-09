@@ -51,7 +51,7 @@ output llp_gen/madgraph_pythia
 
 launch
 shower=Pythia8
-set nevents 80000
+set nevents 20000
 set use_syst False
 set MS0 125.
 set DECAY 9000010 0.1
@@ -63,15 +63,15 @@ set pythia8_card HiddenValley:nFlav = 1
 set pythia8_card HiddenValley:fragment = on
 set pythia8_card HiddenValley:FSR = on
 set pythia8_card HiddenValley:alphaOrder = 1
-set pythia8_card HiddenValley:spinFv=0
+set pythia8_card HiddenValley:spinFV = 0
 set pythia8_card 4900111:mayDecay = off
-set pythia8_card 4900113:mayDecay = off
 set MVq 0.1
 set pythia8_card HiddenValley:Lambda = 1.
 set pythia8_card HiddenValley:pTminFSR = 1.1
 set pythia8_card 4900111:m0 = 0.4
 set pythia8_card 4900113:m0 = 1.
 set pythia8_card HiddenValley:probVector = 0.32
+set pythia8_card 4900113:oneChannel = 1 1. 0 4900111 4900111
 
 #launch
 #shower=Pythia8

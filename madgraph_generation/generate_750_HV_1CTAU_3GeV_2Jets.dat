@@ -29,9 +29,9 @@ define vl~ = ve~ vm~ vt~
 # Specify process(es) to run
 #generate p p > h > SS1 SS2, SS1 > b b~, SS2 > ve ve~ @1
 
-generate p p > S0, (S0 > vq vq~)
-add process p p > S0 j, (S0 > vq vq~)
-add process p p > S0 j j, (S0 > vq vq~)
+generate p p > A0, (A0 > vq vq~)
+add process p p > A0 j, (A0 > vq vq~)
+add process p p > A0 j j, (A0 > vq vq~)
 
 # The beyond Standard Model physics process is gluon fusion production of SM Higgs, with subsequent decay h > X X. X is new physics particle and taken to be real scalar here. One of X decays to a pair of bottom quark, and the other X flies out of detector and behaves as missing energy.
 
@@ -53,9 +53,9 @@ launch
 shower=Pythia8
 set nevents 20000
 set use_syst False
-set MS0 125.
-set DECAY 9000010 0.1
-set MA0 10000.
+set MS0 10000.
+set DECAY 9000011 0.75
+set MA0 750.
 set HVINPUTS 2 0.
 set HVINPUTS 5 0.
 set pythia8_card HiddenValley:Ngauge = 3
@@ -65,12 +65,11 @@ set pythia8_card HiddenValley:FSR = on
 set pythia8_card HiddenValley:alphaOrder = 1
 set pythia8_card HiddenValley:spinFV = 0
 set pythia8_card 4900111:mayDecay = off
-set MVq 2.
-set pythia8_card HiddenValley:Lambda = 20.
-set pythia8_card HiddenValley:pTminFSR = 22
-set pythia8_card 4900111:m0 = 8.
-set pythia8_card 4900113:m0 = 20.
-set pythia8_card 4900113:isResonance = off
+set MVq 0.3
+set pythia8_card HiddenValley:Lambda = 3.
+set pythia8_card HiddenValley:pTminFSR = 3.3
+set pythia8_card 4900111:m0 = 1.2
+set pythia8_card 4900113:m0 = 3.
 set pythia8_card HiddenValley:probVector = 0.32
 set pythia8_card 4900113:oneChannel = 1 1. 0 4900111 4900111
 
