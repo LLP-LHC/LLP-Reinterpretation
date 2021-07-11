@@ -22,10 +22,10 @@ model_file=$2
 task_name=$1
 model_dir=madgraph_generation
 top_directory=`git rev-parse --show-toplevel`
-eos_dir=/store/user/cpena/llp_gen
+eos_dir=/storage/cms/store/user/cpena/llp_gen
 executable=MG5_aMC_v2_9_3/bin/mg5_aMC
-tarball=/storage/user/cpena/work/new_clean_for_llp/CMSSW_9_4_20/src/LLP-Reinterpretation_v2.tar.gz
-
+tarball=/storage/af/user/cpena/work/new_clean_for_llp/CMSSW_9_4_20/src/LLP-Reinterpretation_v3.tar.gz
+CMSSW_DIR=/storage/af/user/cpena/work/new_clean_for_llp/CMSSW_9_4_20/
 echo "top directory: "$top_directory
 
 ###################################################
@@ -35,8 +35,8 @@ echo "top directory: "$top_directory
 #echo ${output_dir}
 #mkdir -p ${output_dir}
 eval `scram unsetenv -sh`
-echo gfal-mkdir -p gsiftp://transfer.ultralight.org/${eos_dir}/${task_name}
-gfal-mkdir -p gsiftp://transfer.ultralight.org/${eos_dir}/${task_name}
+echo gfal-mkdir -p gsiftp://transfer-lb.ultralight.org/${eos_dir}/${task_name}
+gfal-mkdir -p gsiftp://transfer-lb.ultralight.org/${eos_dir}/${task_name}
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 cd ${top_directory}
@@ -77,22 +77,22 @@ job_n=1
 cp ${scripts_dir}/run_job_caltech_tier2.sh ${task_name_dir}/run_job.sh
 
 printf "\n" >> ${task_name_dir}/run_job.sh
-printf "cd "${CMSSW_BASE} >> ${task_name_dir}/run_job.sh
+printf "cd "${CMSSW_DIR} >> ${task_name_dir}/run_job.sh
 printf '\neval `scram runtime -sh`' >> ${task_name_dir}/run_job.sh
 printf "\ncd -" >> ${task_name_dir}/run_job.sh
 printf "\n###########################" >> ${task_name_dir}/run_job.sh
 printf "\n#run executable" >> ${task_name_dir}/run_job.sh
 printf "\n###########################" >> ${task_name_dir}/run_job.sh
-printf '\ntar -zxf LLP-Reinterpretation_v2.tar.gz' >> ${task_name_dir}/run_job.sh
-printf '\ncp '${model_file}' LLP-Reinterpretation/.' >> ${task_name_dir}/run_job.sh
-printf '\ncd LLP-Reinterpretation' >> ${task_name_dir}/run_job.sh
-printf '\nsource setup.sh' >> ${task_name_dir}/run_job.sh
+printf '\ntar -zxf LLP-Reinterpretation_v3.tar.gz' >> ${task_name_dir}/run_job.sh
+#printf '\ncp '${model_file}' LLP-Reinterpretation/.' >> ${task_name_dir}/run_job.sh
+#printf '\ncd LLP-Reinterpretation' >> ${task_name_dir}/run_job.sh
+#printf '\nsource setup.sh' >> ${task_name_dir}/run_job.sh
 printf '\npython2  '${executable}' $1' >> ${task_name_dir}/run_job.sh
 printf '\nls -ltrh' >> ${task_name_dir}/run_job.sh
-printf '\nls -ltrh htoS1S2/htoS1S2_2j_pythia/Events/run_01/' >> ${task_name_dir}/run_job.sh
+#printf '\nls -ltrh htoS1S2/htoS1S2_2j_pythia/Events/run_01/' >> ${task_name_dir}/run_job.sh
 printf '\neval `scram unsetenv -sh`' >> ${task_name_dir}/run_job.sh
-printf "\n\ngfal-copy -rf llp_gen/madgraph_pythia/Events/run_01 gsiftp://transfer.ultralight.org//"${eos_dir}/${task_name}/${task_name}"_mad5_pythia8_run_"${job_n} >> ${task_name_dir}/run_job.sh
-printf "\ncd ../; rm -rf LLP-Reinterpretation" >> ${task_name_dir}/run_job.sh
+printf "\n\ngfal-copy -rf llp_gen/madgraph_pythia/Events/run_01 gsiftp://transfer-lb.ultralight.org//"${eos_dir}/${task_name}/${task_name}"_mad5_pythia8_run_"${job_n} >> ${task_name_dir}/run_job.sh
+#printf "\ncd ../; rm -rf LLP-Reinterpretation" >> ${task_name_dir}/run_job.sh
 
 ##################################################
 ####create condor log directories inside task name
