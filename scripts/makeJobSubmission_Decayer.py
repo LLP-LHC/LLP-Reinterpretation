@@ -178,8 +178,8 @@ x509userproxy = $ENV(X509_USER_PROXY)
 Should_Transfer_Files = YES
 WhenToTransferOutput = ON_EXIT
 Requirements=(TARGET.OpSysAndVer=="CentOS7" && regexp("blade.*", TARGET.Machine))
-RequestMemory = 2000
-RequestCpus = 1
+RequestMemory = 4000
+RequestCpus = 2
 RequestDisk = 4
 +RunAsOwner = True
 +InteractiveUser = true
