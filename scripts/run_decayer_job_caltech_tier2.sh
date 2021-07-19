@@ -51,7 +51,7 @@ export LD_LIBRARY_PATH=${PWD}/LLP-Reinterpretation/MG5_aMC_v2_9_3/HEPTools/boost
 
 mkfifo ./DecayerOutput_split_${jobNumber}.hepmc
 
-Pythia8Decayer_install/bin/Pythia8Decayer -c Pythia8Decayer_install/share/Pythia8Decayer/default.dat -i /storage/af/user/sixie/data/llp_gen/${modelName}/events_split_${jobNumber}.hepmc -o ./DecayerOutput_split_${jobNumber}.hepmc -d ${decayTable} &
+Pythia8Decayer_install/bin/Pythia8Decayer -c Pythia8Decayer_install/share/Pythia8Decayer/hv_1ct.dat -i /storage/af/user/sixie/data/llp_gen/${modelName}/events_split_${jobNumber}.hepmc -o ./DecayerOutput_split_${jobNumber}.hepmc -d ${decayTable} &
 PY8DEC_PID=$!
 
 #cp -v ./DecayerOutput_split_${jobNumber}.hepmc ${outputDir}/
