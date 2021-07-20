@@ -29,9 +29,9 @@ define vl~ = ve~ vm~ vt~
 # Specify process(es) to run
 #generate p p > h > SS1 SS2, SS1 > b b~, SS2 > ve ve~ @1
 
-generate p p > Zp j, Zp > dm1 dm2
-add process p p > Zp j j, Zp > dm1 dm2
-#add process p p > Zp j j j, Zp > dm1 dm2
+generate p p > zp j
+add process p p > zp j j
+#add process p p > zp j j j
 
 # The beyond Standard Model physics process is gluon fusion production of SM Higgs, with subsequent decay h > X X. X is new physics particle and taken to be real scalar here. One of X decays to a pair of bottom quark, and the other X flies out of detector and behaves as missing energy.
 
@@ -51,6 +51,7 @@ output llp_gen/madgraph_pythia
 
 launch
 shower=Pythia8
+madspin=onshell
 set nevents 80000
 set use_syst False
 set HIDDEN 1 120.
@@ -60,6 +61,7 @@ set HIDDEN 6 40.
 set HIDDEN 7 42.
 set run_card xqcut = 30.
 set run_card pt_min_pdg = {1023: 100.}
+decay zp > dm1 dm2
 #set pythia8_card 9000001:mayDecay = off
 #set pythia8_card 9000005:mayDecay = off
 
