@@ -62,7 +62,7 @@ PY8DEC_PID=$!
 cd Delphes
 echo "Use Delphes Card: ${delphesCard}"
 
-./DelphesHepMC cards/${delphesCard} ../DelphesOutput_split_${jobNumber}.root ../DecayerOutput_split_${jobNumber}.hepmc &
+cat ../DecayerOutput_split_${jobNumber}.hepmc | ./DelphesHepMC cards/${delphesCard} ../DelphesOutput_split_${jobNumber}.root &
 DELPHES_PID=$!
 
 cd -
