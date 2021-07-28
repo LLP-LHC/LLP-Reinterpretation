@@ -35,7 +35,7 @@ eval `scram runtime -sh`
 cd -
 
 #untar stuff...
-tar vxzf Decayer_Delphes_tarball.tgz
+tar xzf Decayer_Delphes_tarball.tgz
 
 ###########################
 #run Decayer
@@ -49,7 +49,7 @@ export LD_LIBRARY_PATH=${PWD}/LLP-Reinterpretation/MG5_aMC_v2_9_3/HEPTools/boost
 
 #cd /storage/af/user/sixie/LLP-Reinterpretation/Pythia8Decayer_install/
 
-Pythia8Decayer_install/bin/Pythia8Decayer -c Pythia8Decayer_install/share/Pythia8Decayer/default.dat -i /storage/af/user/sixie/data/llp_gen/${modelName}/events_split_${jobNumber}.hepmc -o ./DecayerOutput_split_${jobNumber}.hepmc -d ${decayTable}
+Pythia8Decayer_install/bin/Pythia8Decayer -c Pythia8Decayer_install/share/Pythia8Decayer/default.dat -i /storage/af/user/cpena/data/llp_gen/${modelName}/tag_1_pythia8_events_split_${jobNumber}.hepmc -o ./DecayerOutput_split_${jobNumber}.hepmc -d ${decayTable}
 
 #cp -v ./DecayerOutput_split_${jobNumber}.hepmc ${outputDir}/
 

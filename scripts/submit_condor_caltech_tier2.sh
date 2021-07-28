@@ -92,6 +92,7 @@ printf '\nls -ltrh' >> ${task_name_dir}/run_job.sh
 #printf '\nls -ltrh htoS1S2/htoS1S2_2j_pythia/Events/run_01/' >> ${task_name_dir}/run_job.sh
 printf '\neval `scram unsetenv -sh`' >> ${task_name_dir}/run_job.sh
 printf "\n\ngfal-copy -rf llp_gen/madgraph_pythia/Events/run_01 gsiftp://transfer-lb.ultralight.org//"${eos_dir}/${task_name}/${task_name}"_mad5_pythia8_run_"${job_n} >> ${task_name_dir}/run_job.sh
+printf "\n\ngfal-copy -rf llp_gen/madgraph_pythia/Events/run_01_decayed_1 gsiftp://transfer-lb.ultralight.org//"${eos_dir}/${task_name}/${task_name}"_mad5_pythia8_run_"${job_n} >> ${task_name_dir}/run_job.sh
 printf "\ncd ../; rm -rf LLP-Reinterpretation" >> ${task_name_dir}/run_job.sh
 
 ##################################################
